@@ -4,38 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MARSANO — Flowers, Interiors & Creative Events</title>
+  <title>Holland Souvenir Shop — A Piece of Holland</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
-    /* =========================================================
-       MARSANO BERLIN — DARK EDITORIAL REDESIGN
-       ========================================================= */
-
     :root {
-      --black: #0b0b0a;
-      --black-soft: #121210;
-      --charcoal: #191917;
-
-      --cream: #eee8dc;
-      --cream-soft: #d8d0c2;
-      --muted: #aaa398;
-
-      --burgundy: #5b1f2d;
-      --burgundy-light: #72283a;
-
-      --sage: #414c40;
-      --sage-light: #65705e;
-
-      --line: rgba(238, 232, 220, 0.18);
-
-      --serif: "Playfair Display", Georgia, serif;
-      --sans: "DM Sans", Arial, sans-serif;
+      --blue: #123b5d;
+      --blue-dark: #082b45;
+      --blue-light: #e5eef2;
+      --red: #c94332;
+      --orange: #e87532;
+      --cream: #f5f1e8;
+      --cream-dark: #e9e1d3;
+      --white: #ffffff;
+      --black: #111111;
+      --gray: #6d6d6d;
+      --border: #ddd8ce;
     }
 
     * {
@@ -49,638 +38,673 @@
     }
 
     body {
-      background: var(--black);
-      color: var(--cream);
-      font-family: var(--sans);
-      font-size: 18px;
-      line-height: 1.55;
-      overflow-x: hidden;
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.5;
     }
 
     img {
-      display: block;
       width: 100%;
+      height: 100%;
       object-fit: cover;
+      display: block;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     button {
       font-family: inherit;
     }
 
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
+    /* =========================
+       TOP BAR
+    ========================= */
 
-    .top-bar {
-      background: var(--burgundy);
-      color: var(--cream);
+    .topbar {
+      background: var(--blue-dark);
+      color: white;
       text-align: center;
       padding: 10px 20px;
       font-size: 13px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      letter-spacing: .04em;
     }
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
-      position: absolute;
-      top: 39px;
-      left: 0;
-      width: 100%;
-      z-index: 20;
-      padding: 28px 5vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.15);
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .logo {
-      font-family: var(--serif);
-      font-size: 31px;
-      letter-spacing: 0.16em;
-      font-weight: 500;
-    }
+    .nav {
+      max-width: 1400px;
+      margin: auto;
+      height: 86px;
+      padding: 0 40px;
 
-    nav {
       display: flex;
       align-items: center;
-      gap: 34px;
-    }
-
-    nav a {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 600;
-      transition: opacity 0.3s ease;
-    }
-
-    nav a:hover {
-      opacity: 0.55;
-    }
-
-    .nav-shop {
-      border: 1px solid rgba(238,232,220,0.7);
-      padding: 10px 18px;
-    }
-
-    /* =========================================================
-       HERO
-       ========================================================= */
-
-    .hero {
-      min-height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
-      background: #111;
-    }
-
-    .hero-image {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.55) 0%,
-          rgba(0,0,0,0.18) 35%,
-          rgba(0,0,0,0.70) 100%
-        ),
-        url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=2200&q=90")
-        center / cover;
-      transform: scale(1.02);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      padding: 160px 7vw 90px;
-      max-width: 1500px;
-    }
-
-    .eyebrow {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-weight: 600;
-      margin-bottom: 22px;
-      color: var(--cream-soft);
-    }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: clamp(72px, 10vw, 170px);
-      line-height: 0.88;
-      letter-spacing: -0.045em;
-      max-width: 1200px;
-      margin-bottom: 38px;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-    }
-
-    .hero-bottom {
-      display: flex;
       justify-content: space-between;
-      align-items: flex-end;
       gap: 40px;
     }
 
-    .hero-description {
-      max-width: 570px;
-      font-size: 21px;
-      line-height: 1.45;
-      color: var(--cream-soft);
-    }
-
-    .hero-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 18px;
-      background: var(--cream);
-      color: var(--black);
-      padding: 17px 27px;
-      font-size: 14px;
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+      line-height: 1;
+      color: var(--blue-dark);
       white-space: nowrap;
-      transition: 0.3s ease;
     }
 
-    .hero-cta:hover {
-      background: var(--burgundy);
-      color: var(--cream);
-    }
-
-    /* =========================================================
-       INTRO
-       ========================================================= */
-
-    .intro {
-      background: var(--black-soft);
-      padding: 130px 7vw;
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 100px;
-      align-items: start;
-    }
-
-    .section-label {
-      font-size: 14px;
+    .logo span {
+      display: block;
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      letter-spacing: .25em;
       text-transform: uppercase;
-      letter-spacing: 0.17em;
-      color: var(--muted);
+      margin-top: 5px;
+      color: var(--red);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
       font-weight: 600;
     }
 
-    .intro h2 {
-      font-family: var(--serif);
-      font-size: clamp(48px, 6vw, 92px);
-      line-height: 0.98;
-      font-weight: 400;
-      letter-spacing: -0.035em;
+    .nav-links a {
+      position: relative;
     }
 
-    .intro h2 em {
-      font-style: italic;
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: var(--red);
+      transition: .25s;
     }
 
-    .intro-copy {
-      max-width: 760px;
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
-    .intro-copy p {
-      font-size: 24px;
-      line-height: 1.5;
-      color: var(--cream-soft);
-      margin-bottom: 30px;
-    }
-
-    .text-link {
-      display: inline-block;
-      border-bottom: 1px solid var(--cream);
-      padding-bottom: 6px;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 0.12em;
-      font-weight: 700;
-    }
-
-    /* =========================================================
-       IMAGE FEATURE
-       ========================================================= */
-
-    .feature {
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      min-height: 720px;
-    }
-
-    .feature-image {
-      background:
-        linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.15)),
-        url("https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1800&q=90")
-        center / cover;
-    }
-
-    .feature-copy {
-      background: var(--burgundy);
-      padding: 90px 7vw;
+    .nav-icons {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      gap: 15px;
+      align-items: center;
     }
 
-    .feature-copy .section-label {
-      color: #d6b9bf;
+    .icon {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      transition: .25s;
+    }
+
+    .icon:hover {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 28px 40px 0;
+    }
+
+    .hero-image {
+      min-height: 650px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(8,43,69,.88),
+          rgba(8,43,69,.35),
+          rgba(8,43,69,.05)
+        ),
+        url("https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      position: absolute;
+      left: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 680px;
+      color: white;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .25em;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(58px, 7vw, 108px);
+      line-height: .94;
+      font-weight: 600;
       margin-bottom: 28px;
     }
 
-    .feature-copy h2 {
-      font-family: var(--serif);
-      font-size: clamp(52px, 6vw, 90px);
-      line-height: 0.95;
-      font-weight: 400;
-      margin-bottom: 35px;
+    .hero p {
+      max-width: 530px;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 34px;
     }
 
-    .feature-copy p {
-      font-size: 20px;
-      line-height: 1.55;
-      color: #e4d5d7;
-      max-width: 520px;
-      margin-bottom: 35px;
-    }
-
-    .feature-copy .text-link {
-      width: fit-content;
-    }
-
-    /* =========================================================
-       SERVICES
-       ========================================================= */
-
-    .services {
-      background: var(--black);
-      padding: 140px 7vw;
-    }
-
-    .services-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 50px;
-      margin-bottom: 75px;
-    }
-
-    .services-header h2 {
-      font-family: var(--serif);
-      font-size: clamp(60px, 8vw, 115px);
-      line-height: 0.9;
-      font-weight: 400;
-      letter-spacing: -0.04em;
-    }
-
-    .services-header p {
-      max-width: 440px;
-      font-size: 19px;
-      color: var(--muted);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-
-    .service-card {
-      min-height: 390px;
-      padding: 45px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: background 0.35s ease;
-    }
-
-    .service-card:hover {
-      background: var(--charcoal);
-    }
-
-    .service-number {
-      font-size: 13px;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-    }
-
-    .service-card h3 {
-      font-family: var(--serif);
-      font-size: clamp(38px, 4vw, 58px);
-      line-height: 0.98;
-      font-weight: 400;
-      margin: 50px 0 20px;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.5;
-      max-width: 360px;
-    }
-
-    /* =========================================================
-       WEDDINGS / EVENTS
-       ========================================================= */
-
-    .dark-feature {
-      background: var(--sage);
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      min-height: 760px;
-    }
-
-    .dark-feature-copy {
-      padding: 100px 7vw;
-      display: flex;
-      flex-direction: column;
+    .button {
+      display: inline-flex;
+      align-items: center;
       justify-content: center;
+      padding: 15px 25px;
+      background: white;
+      color: var(--blue-dark);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      transition: .25s;
     }
 
-    .dark-feature-copy .section-label {
-      color: #c8d0c4;
+    .button:hover {
+      background: var(--orange);
+      color: white;
+    }
+
+    .button.dark {
+      background: var(--blue-dark);
+      color: white;
+    }
+
+    .button.dark:hover {
+      background: var(--red);
+    }
+
+    /* =========================
+       TRUST BAR
+    ========================= */
+
+    .trust {
+      max-width: 1400px;
+      margin: auto;
+      padding: 28px 40px;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .trust-item {
+      padding: 20px;
+      border-right: 1px solid var(--border);
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-number {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      color: var(--blue);
+    }
+
+    .trust-text {
+      font-size: 13px;
+      color: var(--gray);
+      margin-top: 3px;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      max-width: 1000px;
+      margin: 80px auto 90px;
+      padding: 0 30px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 5vw, 70px);
+      color: var(--blue-dark);
+      line-height: 1.05;
       margin-bottom: 25px;
     }
 
-    .dark-feature-copy h2 {
-      font-family: var(--serif);
-      font-size: clamp(58px, 7vw, 105px);
-      line-height: 0.9;
-      font-weight: 400;
-      margin-bottom: 35px;
+    .intro p {
+      font-size: 18px;
+      color: var(--gray);
+      max-width: 720px;
+      margin: auto;
+      line-height: 1.8;
     }
 
-    .dark-feature-copy p {
-      color: #d5dbd1;
-      font-size: 20px;
-      line-height: 1.55;
-      max-width: 520px;
-      margin-bottom: 35px;
+    /* =========================
+       CATEGORY GRID
+    ========================= */
+
+    .section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px 100px;
     }
 
-    .dark-feature-image {
-      background:
-        linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.18)),
-        url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1900&q=90")
-        center / cover;
-    }
-
-    /* =========================================================
-       SHOP
-       ========================================================= */
-
-    .shop {
-      background: var(--black-soft);
-      padding: 140px 7vw;
-    }
-
-    .shop-header {
+    .section-heading {
       display: flex;
       justify-content: space-between;
       align-items: end;
-      margin-bottom: 65px;
+      margin-bottom: 30px;
       gap: 30px;
     }
 
-    .shop-header h2 {
-      font-family: var(--serif);
-      font-size: clamp(60px, 8vw, 115px);
-      font-weight: 400;
-      line-height: 0.9;
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 52px;
+      line-height: 1;
+      color: var(--blue-dark);
     }
 
-    .shop-header p {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 420px;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .product-image {
-      aspect-ratio: 0.82;
-      overflow: hidden;
-      margin-bottom: 22px;
-      background: #222;
-    }
-
-    .product-image img {
-      height: 100%;
-      transition: transform 0.6s ease;
-    }
-
-    .product:hover .product-image img {
-      transform: scale(1.04);
-    }
-
-    .product h3 {
-      font-family: var(--serif);
-      font-size: 29px;
-      font-weight: 400;
-      margin-bottom: 5px;
-    }
-
-    .product p {
-      color: var(--muted);
+    .section-heading p {
+      max-width: 440px;
+      color: var(--gray);
       font-size: 15px;
     }
 
-    /* =========================================================
-       CTA
-       ========================================================= */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
 
-    .final-cta {
-      background: var(--burgundy);
+    .category {
+      position: relative;
+      height: 330px;
+      overflow: hidden;
+      background: var(--blue-light);
+    }
+
+    .category img {
+      transition: transform .6s ease;
+    }
+
+    .category:hover img {
+      transform: scale(1.06);
+    }
+
+    .category-overlay {
+      position: absolute;
+      inset: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
+      padding: 28px;
+      color: white;
+
+      background:
+        linear-gradient(
+          transparent 35%,
+          rgba(0,0,0,.75)
+        );
+    }
+
+    .category-overlay h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      margin-bottom: 7px;
+    }
+
+    .category-overlay span {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    /* =========================
+       FEATURE
+    ========================= */
+
+    .feature {
+      max-width: 1400px;
+      margin: 0 auto 110px;
+      padding: 0 40px;
+
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
       min-height: 650px;
-      padding: 120px 7vw;
+    }
+
+    .feature-image {
+      min-height: 600px;
+      background:
+        url("https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+    }
+
+    .feature-content {
+      background: var(--blue);
+      color: white;
+      padding: 80px 70px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .feature-content .eyebrow {
+      color: #c7dce7;
+    }
+
+    .feature-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(45px, 5vw, 75px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .feature-content p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #dce7ec;
+      margin-bottom: 30px;
+    }
+
+    /* =========================
+       PRODUCT SECTION
+    ========================= */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .product {
+      background: white;
+      border: 1px solid var(--border);
+      transition: .25s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.08);
+    }
+
+    .product-image {
+      height: 330px;
+      overflow: hidden;
+      background: #e8e8e8;
+    }
+
+    .product-image img {
+      transition: transform .4s;
+    }
+
+    .product:hover .product-image img {
+      transform: scale(1.05);
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-category {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--red);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .product h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      color: var(--blue-dark);
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-weight: 700;
+      color: var(--black);
+    }
+
+    /* =========================
+       BLUE BANNER
+    ========================= */
+
+    .blue-banner {
+      background: var(--blue-dark);
+      color: white;
+      margin: 20px 40px 110px;
+      padding: 85px 60px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .blue-banner h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(45px, 5vw, 75px);
+      line-height: 1;
+    }
+
+    .blue-banner p {
+      color: #d4e0e5;
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    /* =========================
+       SYMBOLS
+    ========================= */
+
+    .symbols {
+      max-width: 1400px;
+      margin: auto;
+      padding: 0 40px 110px;
+    }
+
+    .symbols-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 15px;
+    }
+
+    .symbol {
+      background: white;
+      min-height: 160px;
+      border: 1px solid var(--border);
+
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+
+      padding: 20px;
+      transition: .25s;
     }
 
-    .final-cta-inner {
-      max-width: 1100px;
+    .symbol:hover {
+      background: var(--blue);
+      color: white;
     }
 
-    .final-cta .section-label {
-      color: #d7bbc1;
-      margin-bottom: 28px;
-    }
-
-    .final-cta h2 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: clamp(65px, 10vw, 145px);
-      line-height: 0.87;
-      letter-spacing: -0.04em;
-      margin-bottom: 45px;
-    }
-
-    .final-cta h2 em {
-      font-style: italic;
-    }
-
-    .final-cta p {
-      max-width: 620px;
-      margin: 0 auto 40px;
-      color: #dfced1;
-      font-size: 20px;
-      line-height: 1.5;
-    }
-
-    .light-button {
-      display: inline-block;
-      background: var(--cream);
-      color: var(--black);
-      padding: 18px 30px;
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-      font-size: 13px;
-      font-weight: 700;
-      transition: 0.3s ease;
-    }
-
-    .light-button:hover {
-      background: var(--black);
-      color: var(--cream);
-    }
-
-    /* =========================================================
-       FOOTER
-       ========================================================= */
-
-    footer {
-      background: #070706;
-      padding: 80px 7vw 35px;
-    }
-
-    .footer-top {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 60px;
-      padding-bottom: 80px;
-    }
-
-    .footer-logo {
-      font-family: var(--serif);
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .footer-intro {
-      color: var(--muted);
-      font-size: 17px;
-      max-width: 350px;
-      line-height: 1.5;
-    }
-
-    footer h4 {
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      font-size: 13px;
-      margin-bottom: 22px;
-    }
-
-    footer ul {
-      list-style: none;
-    }
-
-    footer li {
+    .symbol-icon {
+      font-size: 35px;
       margin-bottom: 12px;
     }
 
-    footer li a {
-      color: var(--muted);
-      font-size: 16px;
-      transition: color 0.3s ease;
+    .symbol h3 {
+      font-size: 14px;
     }
 
-    footer li a:hover {
-      color: var(--cream);
+    /* =========================
+       CTA
+    ========================= */
+
+    .final-cta {
+      background: var(--orange);
+      color: white;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(50px, 7vw, 95px);
+      line-height: .95;
+      margin-bottom: 25px;
+    }
+
+    .final-cta p {
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .final-cta .button {
+      background: var(--blue-dark);
+      color: white;
+    }
+
+    .final-cta .button:hover {
+      background: white;
+      color: var(--blue-dark);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #071f31;
+      color: white;
+      padding: 70px 40px 30px;
+    }
+
+    .footer-grid {
+      max-width: 1400px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 60px;
+    }
+
+    footer .logo {
+      color: white;
+    }
+
+    .footer-description {
+      color: #b8c8d0;
+      max-width: 360px;
+      margin-top: 20px;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .footer-column h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      margin-bottom: 20px;
+      color: #dce8ed;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #aebdc5;
+      font-size: 14px;
+      margin-bottom: 12px;
+      transition: .2s;
+    }
+
+    .footer-column a:hover {
+      color: white;
     }
 
     .footer-bottom {
-      border-top: 1px solid rgba(238,232,220,0.15);
+      max-width: 1400px;
+      margin: 60px auto 0;
       padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.15);
+
       display: flex;
       justify-content: space-between;
-      gap: 20px;
-      color: #77736c;
-      font-size: 13px;
+      color: #91a3ad;
+      font-size: 12px;
     }
 
-    /* =========================================================
-       RESPONSIVE
-       ========================================================= */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 1000px) {
 
-      header {
-        padding: 22px 5vw;
+      .nav {
+        padding: 0 20px;
       }
 
-      nav {
-        gap: 18px;
-      }
-
-      nav a:not(.nav-shop) {
+      .nav-links {
         display: none;
       }
 
-      .hero-content {
-        padding: 150px 6vw 70px;
+      .hero {
+        padding: 15px 20px 0;
       }
 
-      .hero-bottom {
-        flex-direction: column;
-        align-items: flex-start;
+      .hero-image {
+        min-height: 600px;
       }
 
-      .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
+      .trust {
+        padding: 25px 20px;
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .feature,
-      .dark-feature {
-        grid-template-columns: 1fr;
+      .trust-item:nth-child(2) {
+        border-right: none;
       }
 
-      .feature-image,
-      .dark-feature-image {
-        min-height: 550px;
-      }
-
-      .services-grid {
+      .categories {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -688,147 +712,94 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .footer-top {
-        grid-template-columns: 1fr 1fr;
+      .feature {
+        padding: 0 20px;
+        grid-template-columns: 1fr;
+      }
+
+      .feature-image {
+        min-height: 450px;
+      }
+
+      .blue-banner {
+        margin: 0 20px 90px;
+        grid-template-columns: 1fr;
+      }
+
+      .symbols-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 650px) {
 
-      body {
-        font-size: 17px;
-      }
-
-      .top-bar {
-        font-size: 10px;
-        padding: 8px 15px;
-      }
-
-      header {
-        top: 31px;
-        padding: 20px 5vw;
-      }
-
       .logo {
-        font-size: 25px;
-      }
-
-      .nav-shop {
-        padding: 8px 13px;
-        font-size: 11px;
-      }
-
-      .hero {
-        min-height: 800px;
-      }
-
-      .hero-content {
-        padding: 130px 6vw 55px;
+        font-size: 21px;
       }
 
       .hero h1 {
-        font-size: clamp(64px, 18vw, 105px);
-        line-height: 0.86;
-        margin-bottom: 28px;
+        font-size: 54px;
       }
 
-      .hero-description {
-        font-size: 18px;
+      .hero p {
+        font-size: 16px;
       }
 
-      .hero-cta {
-        width: 100%;
-        justify-content: center;
+      .section,
+      .symbols {
+        padding-left: 20px;
+        padding-right: 20px;
       }
 
-      .intro,
-      .services,
-      .shop {
-        padding: 90px 6vw;
+      .section-heading {
+        display: block;
       }
 
-      .intro h2,
-      .services-header h2,
-      .shop-header h2 {
-        font-size: 58px;
+      .section-heading h2 {
+        font-size: 42px;
+        margin-bottom: 15px;
       }
 
-      .intro-copy p {
-        font-size: 20px;
-      }
-
-      .feature-copy,
-      .dark-feature-copy {
-        padding: 80px 6vw;
-      }
-
-      .feature-copy h2,
-      .dark-feature-copy h2 {
-        font-size: 60px;
-      }
-
-      .feature-copy p,
-      .dark-feature-copy p {
-        font-size: 18px;
-      }
-
-      .services-header,
-      .shop-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        min-height: 320px;
-        padding: 32px;
-      }
-
-      .service-card h3 {
-        font-size: 43px;
-        margin-top: 35px;
-      }
-
+      .categories,
       .products {
         grid-template-columns: 1fr;
       }
 
-      .product h3 {
-        font-size: 27px;
+      .category {
+        height: 330px;
       }
 
-      .final-cta {
-        min-height: 580px;
-        padding: 90px 6vw;
+      .product-image {
+        height: 350px;
       }
 
-      .final-cta h2 {
-        font-size: 65px;
+      .feature-content {
+        padding: 60px 35px;
       }
 
-      .final-cta p {
-        font-size: 18px;
+      .blue-banner {
+        padding: 65px 35px;
       }
 
-      footer {
-        padding: 65px 6vw 30px;
+      .symbols-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .footer-top {
+      .footer-grid {
         grid-template-columns: 1fr;
-        gap: 45px;
-        padding-bottom: 55px;
-      }
-
-      .footer-logo {
-        font-size: 43px;
+        gap: 40px;
       }
 
       .footer-bottom {
-        flex-direction: column;
+        display: block;
+      }
+
+      .footer-bottom div:last-child {
+        margin-top: 10px;
       }
     }
 
@@ -837,488 +808,674 @@
 
 <body>
 
-  <!-- =======================================================
-       TOP BAR
-       ======================================================= -->
+  <!-- TOP BAR -->
 
-  <div class="top-bar">
-    Berlin · Flowers · Interiors · Events · Workshops
+  <div class="topbar">
+    Holland souvenirs since 1999 · Discover the Netherlands
   </div>
 
 
-  <!-- =======================================================
-       HEADER
-       ======================================================= -->
+  <!-- HEADER -->
 
   <header>
 
-    <a href="#" class="logo">MARSANO</a>
+    <nav class="nav">
 
-    <nav>
-      <a href="#world">The World</a>
-      <a href="#services">Services</a>
-      <a href="#weddings">Weddings</a>
-      <a href="#shop">Shop</a>
-      <a href="#contact" class="nav-shop">Contact</a>
+      <a href="#" class="logo">
+        Holland Souvenir Shop
+        <span>Authentic Dutch Gifts</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#categories">Shop</a>
+        <a href="#delft">Delfts Blauw</a>
+        <a href="#tulips">Tulips</a>
+        <a href="#cities">Cities</a>
+        <a href="#gifts">Gifts</a>
+      </div>
+
+      <div class="nav-icons">
+        <a href="#" class="icon">⌕</a>
+        <a href="#" class="icon">♡</a>
+        <a href="#" class="icon">🛒</a>
+      </div>
+
     </nav>
 
   </header>
 
 
-  <!-- =======================================================
-       HERO
-       ======================================================= -->
+  <!-- HERO -->
 
-  <section class="hero">
+  <main>
 
-    <div class="hero-image"></div>
+    <section class="hero">
 
-    <div class="hero-content">
+      <div class="hero-image">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Authentic Holland Souvenirs
+          </div>
+
+          <h1>
+            Take a piece of Holland home.
+          </h1>
+
+          <p>
+            Discover traditional Dutch souvenirs, Delft Blue ceramics,
+            tulips, wooden clogs, city gifts and unique keepsakes inspired
+            by the Netherlands.
+          </p>
+
+          <a href="#categories" class="button">
+            Explore the collection
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRUST -->
+
+    <section class="trust">
+
+      <div class="trust-item">
+        <div class="trust-number">1999</div>
+        <div class="trust-text">
+          Specialist in Holland souvenirs
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-number">01</div>
+        <div class="trust-text">
+          Authentic Dutch gifts
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-number">NL</div>
+        <div class="trust-text">
+          Inspired by the Netherlands
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-number">∞</div>
+        <div class="trust-text">
+          Memories to take home
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
 
       <div class="eyebrow">
-        Berlin · Since 2005
+        Discover Holland
       </div>
 
-      <h1>
-        Flowers<br>
-        <em>with a point of view.</em>
-      </h1>
+      <h2>
+        More than a souvenir.<br>
+        A memory of the Netherlands.
+      </h2>
 
-      <div class="hero-bottom">
+      <p>
+        From iconic Delft Blue ceramics to colourful tulips,
+        Amsterdam souvenirs, traditional Dutch clogs and little
+        keepsakes, discover objects that bring a piece of Holland
+        into your home.
+      </p>
 
-        <p class="hero-description">
-          MARSANO is a Berlin-based creative world built around
-          flowers, interiors, objects, art and unforgettable
-          experiences.
-        </p>
-
-        <a href="#world" class="hero-cta">
-          Discover MARSANO
-          <span>↓</span>
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- =======================================================
-       INTRO
-       ======================================================= -->
+    <!-- CATEGORIES -->
 
-  <section class="intro" id="world">
+    <section class="section" id="categories">
 
-    <div class="intro-grid">
+      <div class="section-heading">
 
-      <div>
-        <div class="section-label">
-          01 — The MARSANO World
+        <div>
+          <div class="eyebrow">Shop by category</div>
+          <h2>Discover Holland.</h2>
         </div>
-      </div>
-
-      <div class="intro-copy">
-
-        <h2>
-          More than a flower shop.
-          <em>A creative house.</em>
-        </h2>
-
-        <br>
 
         <p>
-          From expressive floral arrangements to interiors,
-          weddings, events, workshops and carefully selected
-          objects, MARSANO brings together different forms of
-          creativity under one distinctive Berlin identity.
+          Explore a carefully curated selection of Dutch-inspired
+          souvenirs, gifts, accessories and traditional objects.
         </p>
 
-        <a href="#" class="text-link">
-          Explore our world →
+      </div>
+
+
+      <div class="categories">
+
+        <a href="#" class="category">
+
+          <img
+            src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=1000&q=80"
+            alt="Delft Blue inspired ceramics"
+          >
+
+          <div class="category-overlay">
+            <h3>Delfts Blauw</h3>
+            <span>Discover collection →</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="category">
+
+          <img
+            src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=1000&q=80"
+            alt="Amsterdam"
+          >
+
+          <div class="category-overlay">
+            <h3>Amsterdam</h3>
+            <span>City souvenirs →</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="category">
+
+          <img
+            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1000&q=80"
+            alt="Tulips"
+          >
+
+          <div class="category-overlay">
+            <h3>Tulips</h3>
+            <span>From Holland →</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="category">
+
+          <img
+            src="https://images.unsplash.com/photo-1520637836862-4d197d17c26a?auto=format&fit=crop&w=1000&q=80"
+            alt="Dutch accessories"
+          >
+
+          <div class="category-overlay">
+            <h3>Bags & Accessories</h3>
+            <span>Explore collection →</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="category">
+
+          <img
+            src="https://images.unsplash.com/photo-1529810313688-490d6e3b7b6d?auto=format&fit=crop&w=1000&q=80"
+            alt="Dutch clogs"
+          >
+
+          <div class="category-overlay">
+            <h3>Dutch Clogs</h3>
+            <span>Traditional Holland →</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="category">
+
+          <img
+            src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=1000&q=80"
+            alt="Dutch jewelry"
+          >
+
+          <div class="category-overlay">
+            <h3>Jewellery</h3>
+            <span>Jewellery & bijoux →</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="category">
+
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80"
+            alt="Dutch clothing"
+          >
+
+          <div class="category-overlay">
+            <h3>Clothing & Textiles</h3>
+            <span>Wear Holland →</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="category">
+
+          <img
+            src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1000&q=80"
+            alt="Dutch gifts"
+          >
+
+          <div class="category-overlay">
+            <h3>Holland Gifts</h3>
+            <span>Find a gift →</span>
+          </div>
+
         </a>
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- =======================================================
-       FLOWERS FEATURE
-       ======================================================= -->
+    <!-- DELFT FEATURE -->
 
-  <section class="feature">
+    <section class="feature" id="delft">
 
-    <div class="feature-image"></div>
+      <div class="feature-image"></div>
 
-    <div class="feature-copy">
+      <div class="feature-content">
 
-      <div class="section-label">
-        02 — Flowers
+        <div class="eyebrow">
+          A Dutch classic
+        </div>
+
+        <h2>
+          The blue of Holland.
+        </h2>
+
+        <p>
+          Discover the timeless world of Delfts Blauw.
+          From decorative tiles and wall plates to miniature
+          windmills, vases, canal houses and traditional ceramics.
+        </p>
+
+        <a href="#" class="button">
+          Explore Delfts Blauw
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="section" id="gifts">
+
+      <div class="section-heading">
+
+        <div>
+          <div class="eyebrow">Selected souvenirs</div>
+          <h2>Little pieces of Holland.</h2>
+        </div>
+
+        <p>
+          Iconic objects designed to keep your Dutch memories
+          close long after the journey ends.
+        </p>
+
+      </div>
+
+
+      <div class="products">
+
+
+        <article class="product">
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=900&q=80"
+              alt="Delft Blue ceramic"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Delfts Blauw
+            </div>
+
+            <h3>
+              Delft Blue Ceramics
+            </h3>
+
+            <div class="product-price">
+              Discover collection
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="product">
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80"
+              alt="Holland tulips"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Tulips
+            </div>
+
+            <h3>
+              Tulips from Holland
+            </h3>
+
+            <div class="product-price">
+              Discover collection
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="product">
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=900&q=80"
+              alt="Amsterdam souvenir"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Amsterdam
+            </div>
+
+            <h3>
+              Amsterdam Souvenirs
+            </h3>
+
+            <div class="product-price">
+              Discover collection
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="product">
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1520637836862-4d197d17c26a?auto=format&fit=crop&w=900&q=80"
+              alt="Holland accessories"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Accessories
+            </div>
+
+            <h3>
+              Bags & Accessories
+            </h3>
+
+            <div class="product-price">
+              Discover collection
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- CITIES -->
+
+    <section class="blue-banner" id="cities">
+
+      <div>
+
+        <div class="eyebrow">
+          From city to city
+        </div>
+
+        <h2>
+          Amsterdam.<br>
+          Rotterdam.<br>
+          Holland.
+        </h2>
+
+      </div>
+
+      <div>
+
+        <p>
+          Bring home a memory from the places that make the
+          Netherlands unique. Explore city-inspired souvenirs,
+          magnets, keychains, mugs, bags and more.
+        </p>
+
+        <a href="#" class="button">
+          Explore city souvenirs
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- SYMBOLS -->
+
+    <section class="symbols">
+
+      <div class="section-heading">
+
+        <div>
+          <div class="eyebrow">Dutch icons</div>
+          <h2>Made of memories.</h2>
+        </div>
+
+      </div>
+
+
+      <div class="symbols-grid">
+
+        <div class="symbol">
+          <div>
+            <div class="symbol-icon">🌷</div>
+            <h3>Tulips</h3>
+          </div>
+        </div>
+
+        <div class="symbol">
+          <div>
+            <div class="symbol-icon">🏠</div>
+            <h3>Canal Houses</h3>
+          </div>
+        </div>
+
+        <div class="symbol">
+          <div>
+            <div class="symbol-icon">🌬️</div>
+            <h3>Windmills</h3>
+          </div>
+        </div>
+
+        <div class="symbol">
+          <div>
+            <div class="symbol-icon">👞</div>
+            <h3>Wooden Clogs</h3>
+          </div>
+        </div>
+
+        <div class="symbol">
+          <div>
+            <div class="symbol-icon">💙</div>
+            <h3>Delft Blue</h3>
+          </div>
+        </div>
+
+        <div class="symbol">
+          <div>
+            <div class="symbol-icon">🚲</div>
+            <h3>Dutch Life</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TULIPS -->
+
+    <section class="feature" id="tulips">
+
+      <div
+        class="feature-image"
+        style="
+          background-image:
+          url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=85');
+        "
+      ></div>
+
+      <div class="feature-content">
+
+        <div class="eyebrow">
+          From Holland
+        </div>
+
+        <h2>
+          A little colour to take home.
+        </h2>
+
+        <p>
+          Explore the Holland tulip collection, from wooden tulips
+          and classic souvenirs to Real Touch tulips and colourful
+          decorative pieces.
+        </p>
+
+        <a href="#" class="button">
+          Discover tulips
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="final-cta">
+
+      <div class="eyebrow">
+        Your Dutch memory starts here
       </div>
 
       <h2>
-        Wild.<br>
-        Unexpected.<br>
-        <em>Beautiful.</em>
+        Bring Holland home.
       </h2>
 
       <p>
-        Seasonal flowers, sculptural arrangements and
-        the unmistakable MARSANO aesthetic. Designed
-        for people who want something beyond ordinary.
+        Discover something beautiful to remember your journey by.
       </p>
 
-      <a href="#" class="text-link">
-        Shop flowers →
+      <a href="#" class="button">
+        Shop Holland souvenirs
       </a>
 
-    </div>
+    </section>
 
-  </section>
+  </main>
 
 
-  <!-- =======================================================
-       SERVICES
-       ======================================================= -->
-
-  <section class="services" id="services">
-
-    <div class="services-header">
-
-      <h2>
-        What we<br>
-        create.
-      </h2>
-
-      <p>
-        One creative studio. Many ways to experience
-        the MARSANO universe.
-      </p>
-
-    </div>
-
-
-    <div class="services-grid">
-
-      <article class="service-card">
-
-        <div class="service-number">
-          01
-        </div>
-
-        <div>
-          <h3>Flowers</h3>
-
-          <p>
-            Bouquets and floral creations designed
-            with a distinctive, seasonal approach.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="service-card">
-
-        <div class="service-number">
-          02
-        </div>
-
-        <div>
-          <h3>Interiors</h3>
-
-          <p>
-            Flowers, furniture, objects and styling
-            for spaces with personality.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="service-card">
-
-        <div class="service-number">
-          03
-        </div>
-
-        <div>
-          <h3>Events</h3>
-
-          <p>
-            Creative floral concepts and environments
-            for unforgettable gatherings.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="service-card">
-
-        <div class="service-number">
-          04
-        </div>
-
-        <div>
-          <h3>Weddings</h3>
-
-          <p>
-            From intimate celebrations to complete
-            floral concepts and installations.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="service-card">
-
-        <div class="service-number">
-          05
-        </div>
-
-        <div>
-          <h3>Workshops</h3>
-
-          <p>
-            Learn, experiment and create with flowers
-            in an inspiring Berlin environment.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="service-card">
-
-        <div class="service-number">
-          06
-        </div>
-
-        <div>
-          <h3>Collaborations</h3>
-
-          <p>
-            Creative partnerships connecting flowers,
-            art, fashion, brands and culture.
-          </p>
-        </div>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       WEDDINGS / EVENTS
-       ======================================================= -->
-
-  <section class="dark-feature" id="weddings">
-
-    <div class="dark-feature-copy">
-
-      <div class="section-label">
-        03 — Weddings & Events
-      </div>
-
-      <h2>
-        Make it<br>
-        <em>unforgettable.</em>
-      </h2>
-
-      <p>
-        Floral installations, table arrangements,
-        ceremony concepts and complete visual worlds
-        created around your occasion.
-      </p>
-
-      <a href="#" class="text-link">
-        Plan your event →
-      </a>
-
-    </div>
-
-    <div class="dark-feature-image"></div>
-
-  </section>
-
-
-  <!-- =======================================================
-       SHOP
-       ======================================================= -->
-
-  <section class="shop" id="shop">
-
-    <div class="shop-header">
-
-      <h2>
-        Selected<br>
-        objects.
-      </h2>
-
-      <p>
-        A considered selection of flowers, vases,
-        furniture, accessories and objects for
-        creating your own MARSANO atmosphere.
-      </p>
-
-    </div>
-
-
-    <div class="products">
-
-      <article class="product">
-
-        <div class="product-image">
-          <img
-            src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=85"
-            alt="Green botanical arrangement"
-          >
-        </div>
-
-        <h3>Seasonal Flowers</h3>
-
-        <p>Fresh · Seasonal · Berlin</p>
-
-      </article>
-
-
-      <article class="product">
-
-        <div class="product-image">
-          <img
-            src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1000&q=85"
-            alt="Elegant interior with decorative objects"
-          >
-        </div>
-
-        <h3>Objects & Interiors</h3>
-
-        <p>Selected · Vintage · Contemporary</p>
-
-      </article>
-
-
-      <article class="product">
-
-        <div class="product-image">
-          <img
-            src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=1000&q=85"
-            alt="Decorative vase"
-          >
-        </div>
-
-        <h3>Vases & Vessels</h3>
-
-        <p>Objects · Forms · Materials</p>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       FINAL CTA
-       ======================================================= -->
-
-  <section class="final-cta" id="contact">
-
-    <div class="final-cta-inner">
-
-      <div class="section-label">
-        04 — Let's create something
-      </div>
-
-      <h2>
-        Your idea.<br>
-        <em>Our flowers.</em>
-      </h2>
-
-      <p>
-        Planning a wedding, event, collaboration or
-        simply looking for something special?
-        Let's talk.
-      </p>
-
-      <a href="#" class="light-button">
-        Get in touch
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       FOOTER
-       ======================================================= -->
+  <!-- FOOTER -->
 
   <footer>
 
-    <div class="footer-top">
+    <div class="footer-grid">
 
       <div>
 
-        <div class="footer-logo">
-          MARSANO
-        </div>
+        <a href="#" class="logo">
+          Holland Souvenir Shop
+          <span>Authentic Dutch Gifts</span>
+        </a>
 
-        <p class="footer-intro">
-          Flowers, interiors, objects, events and
-          creative experiences from Berlin.
+        <p class="footer-description">
+          A collection of Dutch souvenirs, traditional objects,
+          gifts and keepsakes inspired by the Netherlands.
         </p>
 
       </div>
 
 
-      <div>
-
-        <h4>Explore</h4>
-
-        <ul>
-          <li><a href="#">Flowers</a></li>
-          <li><a href="#">Weddings</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Interiors</a></li>
-          <li><a href="#">Workshops</a></li>
-        </ul>
-
-      </div>
-
-
-      <div>
+      <div class="footer-column">
 
         <h4>Shop</h4>
 
-        <ul>
-          <li><a href="#">Bouquets</a></li>
-          <li><a href="#">Vases</a></li>
-          <li><a href="#">Furniture</a></li>
-          <li><a href="#">Accessories</a></li>
-          <li><a href="#">Gifts</a></li>
-        </ul>
+        <a href="#">Delfts Blauw</a>
+        <a href="#">Tulips</a>
+        <a href="#">Dutch Clogs</a>
+        <a href="#">Amsterdam</a>
+        <a href="#">Rotterdam</a>
 
       </div>
 
 
-      <div>
+      <div class="footer-column">
 
-        <h4>Berlin</h4>
+        <h4>Collections</h4>
 
-        <ul>
-          <li><a href="#">Visit us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Newsletter</a></li>
-        </ul>
+        <a href="#">Bags & Accessories</a>
+        <a href="#">Clothing & Textiles</a>
+        <a href="#">Jewellery</a>
+        <a href="#">Kids</a>
+        <a href="#">Holland Gifts</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Explore</h4>
+
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Shipping</a>
+        <a href="#">Gift Service</a>
+        <a href="#">Store</a>
 
       </div>
 
@@ -1327,13 +1484,13 @@
 
     <div class="footer-bottom">
 
-      <span>
-        © 2026 MARSANO Berlin
-      </span>
+      <div>
+        © 2026 Holland Souvenir Shop
+      </div>
 
-      <span>
-        Flowers · Interiors · Events
-      </span>
+      <div>
+        Dutch souvenirs · Delft Blue · Holland Gifts
+      </div>
 
     </div>
 
