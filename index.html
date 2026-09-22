@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MARSANO — Flowers, Interiors & Experiences</title>
+
+<meta name="description" content="MARSANO Berlin — Flowers, interiors, events and creative experiences.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f3f0e8;
+    color: #1c1c19;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --cream: #f3f0e8;
+    --dark: #1c1c19;
+    --burgundy: #6b2636;
+    --sage: #7b826d;
+    --line: rgba(28,28,25,.18);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 4vw;
+
+    mix-blend-mode: difference;
+    color: white;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: .18em;
+}
+
+.nav {
+    display: flex;
+    gap: 28px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+.nav a {
+    position: relative;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background: white;
+    transition: .3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.42)
+        ),
+        url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=2200&q=90")
+        center / cover;
+
+    transform: scale(1.03);
+}
+
+.hero-content {
+    position: absolute;
+    left: 5vw;
+    bottom: 8vh;
+    color: white;
+    max-width: 900px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: clamp(65px, 11vw, 155px);
+    line-height: .86;
+    letter-spacing: -.05em;
+}
+
+.hero h1 em {
+    display: block;
+}
+
+.hero-bottom {
+    margin-top: 45px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-bottom p {
+    max-width: 320px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 15px 21px;
+
+    border: 1px solid currentColor;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+
+    transition: .3s;
+}
+
+.cta:hover {
+    background: white;
+    color: var(--dark);
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    padding: 150px 7vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+}
+
+.intro-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+}
+
+.intro h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 5.5vw, 82px);
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: -.04em;
+}
+
+.intro h2 em {
+    color: var(--burgundy);
+}
+
+.intro-text {
+    align-self: end;
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* =========================
+   WORLD GRID
+========================= */
+
+.world {
+    padding: 0 4vw 150px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 30px;
+}
+
+.section-header h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 72px);
+}
+
+.section-number {
+    font-size: 11px;
+    letter-spacing: .15em;
+}
+
+.world-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 20px;
+}
+
+.world-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 620px;
+}
+
+.world-card.small {
+    min-height: 295px;
+}
+
+.world-column {
+    display: grid;
+    gap: 20px;
+}
+
+.world-card img {
+    height: 100%;
+    transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.world-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 30px;
+
+    color: white;
+
+    background: linear-gradient(
+        transparent 40%,
+        rgba(0,0,0,.65)
+    );
+}
+
+.card-overlay h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.card-overlay span {
+    margin-top: 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+}
+
+/* =========================
+   FLOWER FIELD
+========================= */
+
+.field {
+    background: var(--sage);
+    color: #f4f1e8;
+
+    padding: 150px 7vw;
+
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 7vw;
+
+    align-items: center;
+}
+
+.field-copy .eyebrow {
+    color: #e5e5d7;
+}
+
+.field h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 7vw, 110px);
+    line-height: .9;
+    font-weight: 400;
+    letter-spacing: -.05em;
+}
+
+.field h2 em {
+    display: block;
+}
+
+.field p {
+    margin-top: 35px;
+    max-width: 420px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.field-image {
+    height: 650px;
+}
+
+.field-image img {
+    height: 100%;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    padding: 150px 4vw;
+}
+
+.services-intro {
+    max-width: 800px;
+    margin-bottom: 90px;
+}
+
+.services-intro h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(50px, 7vw, 105px);
+    font-weight: 400;
+    line-height: .92;
+}
+
+.services-intro p {
+    max-width: 450px;
+    margin-top: 30px;
+    line-height: 1.7;
+}
+
+.service-list {
+    border-top: 1px solid var(--line);
+}
+
+.service-item {
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr auto;
+    align-items: center;
+    gap: 30px;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid var(--line);
+
+    transition: padding .3s;
+}
+
+.service-item:hover {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.service-number {
+    font-size: 11px;
+    letter-spacing: .1em;
+}
+
+.service-item h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    font-weight: 400;
+}
+
+.service-item p {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+.arrow {
+    font-size: 24px;
+}
+
+/* =========================
+   FEATURE IMAGE
+========================= */
+
+.feature {
+    padding: 0 4vw 150px;
+}
+
+.feature-image {
+    height: 85vh;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-image img {
+    height: 100%;
+    transition: transform 1s ease;
+}
+
+.feature-image:hover img {
+    transform: scale(1.03);
+}
+
+.feature-caption {
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    color: white;
+}
+
+.feature-caption h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 8vw, 120px);
+    font-weight: 400;
+    line-height: .85;
+}
+
+/* =========================
+   SHOP
+========================= */
+
+.shop {
+    padding: 150px 4vw;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product img {
+    aspect-ratio: .8;
+    margin-bottom: 17px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.product-name {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+}
+
+/* =========================
+   COLLABORATIONS
+========================= */
+
+.collabs {
+    padding: 150px 7vw;
+    background: #20201d;
+    color: #f3f0e8;
+}
+
+.collabs h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 8vw, 120px);
+    font-weight: 400;
+    line-height: .85;
+}
+
+.collab-grid {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,.2);
+}
+
+.collab {
+    min-height: 220px;
+    padding: 30px;
+
+    display: flex;
+    align-items: end;
+
+    background: #20201d;
+
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+
+    transition: .3s;
+}
+
+.collab:hover {
+    background: var(--burgundy);
+}
+
+/* =========================
+   NEWSLETTER / CTA
+========================= */
+
+.final {
+    padding: 180px 7vw;
+    text-align: center;
+}
+
+.final h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: clamp(55px, 9vw, 140px);
+    line-height: .88;
+    letter-spacing: -.05em;
+}
+
+.final p {
+    max-width: 450px;
+    margin: 35px auto;
+    line-height: 1.7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--burgundy);
+    color: #f3f0e8;
+    padding: 70px 4vw 30px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-logo {
+    font-size: 38px;
+    letter-spacing: .16em;
+}
+
+footer h4 {
+    font-size: 11px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+footer p,
+footer a {
+    font-size: 13px;
+    line-height: 2;
+}
+
+.footer-bottom {
+    margin-top: 90px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.25);
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+
+    background: var(--burgundy);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 40px;
+
+    transform: translateY(-100%);
+    transition: transform .5s cubic-bezier(.77,0,.18,1);
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+}
+
+.mobile-menu a {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    margin: 8px 0;
+}
+
+.close-menu {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    border: none;
+    background: none;
+    color: white;
+
+    font-size: 30px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 900px) {
+
+    .nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+        padding: 100px 6vw;
+        gap: 50px;
+    }
+
+    .world {
+        padding: 0 5vw 100px;
+    }
+
+    .world-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .world-card {
+        min-height: 500px;
+    }
+
+    .field {
+        grid-template-columns: 1fr;
+        padding: 100px 6vw;
+    }
+
+    .field-image {
+        height: 500px;
+    }
+
+    .service-item {
+        grid-template-columns: 40px 1fr auto;
+    }
+
+    .service-item p {
+        display: none;
+    }
+
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collab-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-content {
+        left: 7vw;
+        right: 7vw;
+        bottom: 6vh;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-bottom p {
+        font-size: 13px;
+    }
+
+    .intro {
+        padding: 90px 6vw;
+    }
+
+    .services,
+    .shop {
+        padding: 100px 5vw;
+    }
+
+    .feature {
+        padding: 0 5vw 100px;
+    }
+
+    .feature-image {
+        min-height: 500px;
+    }
+
+    .shop-grid {
+        gap: 12px;
+    }
+
+    .collab-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collabs {
+        padding: 100px 6vw;
+    }
+
+    .final {
+        padding: 120px 6vw;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <a href="#" class="logo">MARSANO</a>
+
+    <nav class="nav">
+        <a href="#world">World</a>
+        <a href="#flowers">Flowers</a>
+        <a href="#services">Services</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <button class="menu-btn" onclick="openMenu()">
+        MENU
+    </button>
+
+</header>
+
+
+<!-- =========================
+     MOBILE MENU
+========================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button class="close-menu" onclick="closeMenu()">×</button>
+
+    <a href="#world" onclick="closeMenu()">World</a>
+    <a href="#flowers" onclick="closeMenu()">Flowers</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#shop" onclick="closeMenu()">Shop</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Berlin · Since 2005
+        </div>
+
+        <h1>
+            Flowers
+            <em>with a point</em>
+            <em>of view.</em>
+        </h1>
+
+        <div class="hero-bottom">
+
+            <p>
+                A world of flowers, interiors,
+                objects and creative experiences
+                created in Berlin.
+            </p>
+
+            <a href="#shop" class="cta">
+                Explore MARSANO →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+    <div>
+
+        <div class="intro-label">
+            The MARSANO world
+        </div>
+
+        <h2>
+            Not just
+            <em>flowers.</em>
+        </h2>
+
+    </div>
+
+    <div class="intro-text">
+
+        <p>
+            MARSANO brings together floral design,
+            interiors, vintage objects, events and
+            creative experiences under one distinctive
+            visual language.
+        </p>
+
+        <br>
+
+        <p>
+            Discover a place where flowers become
+            design, spaces become experiences,
+            and every detail has a story.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WORLD
+========================= -->
+
+<section class="world" id="world">
+
+    <div class="section-header">
+
+        <h3>The world of MARSANO</h3>
+
+        <span class="section-number">
+            01 — 04
+        </span>
+
+    </div>
+
+
+    <div class="world-grid">
+
+        <a href="#flowers" class="world-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1500&q=85"
+                alt="Flowers"
+            >
+
+            <div class="card-overlay">
+
+                <h4>Flowers</h4>
+
+                <span>
+                    Seasonal · Signature · Wedding
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <div class="world-column">
+
+            <a href="#services" class="world-card small">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+                    alt="Interiors"
+                >
+
+                <div class="card-overlay">
+
+                    <h4>Interiors</h4>
+
+                    <span>
+                        Objects · Vintage · Design
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <a href="#services" class="world-card small">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85"
+                    alt="Events"
+                >
+
+                <div class="card-overlay">
+
+                    <h4>Events</h4>
+
+                    <span>
+                        Weddings · Brands · Gatherings
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FLOWER FIELD
+========================= -->
+
+<section class="field" id="flowers">
+
+    <div class="field-copy">
+
+        <div class="eyebrow">
+            Grown by MARSANO
+        </div>
+
+        <h2>
+            From
+            <em>field</em>
+            to flower.
+        </h2>
+
+        <p>
+            Seasonal flowers, grown with care
+            and brought into the MARSANO world.
+            A slower, more conscious approach
+            to floral design.
+        </p>
+
+        <br>
+
+        <a href="#" class="cta">
+            Discover our flowers →
+        </a>
+
+    </div>
+
+
+    <div class="field-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=1600&q=90"
+            alt="Flower field"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+    <div class="services-intro">
+
+        <div class="eyebrow">
+            What we create
+        </div>
+
+        <h2>
+            Beautiful things
+            for meaningful
+            <em>moments.</em>
+        </h2>
+
+        <p>
+            From intimate weddings to large-scale
+            events, MARSANO creates floral and spatial
+            experiences with a distinctive point of view.
+        </p>
+
+    </div>
+
+
+    <div class="service-list">
+
+
+        <a href="#" class="service-item">
+
+            <span class="service-number">01</span>
+
+            <h3>Weddings</h3>
+
+            <p>
+                Floral concepts, bouquets,
+                installations and complete
+                wedding styling.
+            </p>
+
+            <span class="arrow">↗</span>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <span class="service-number">02</span>
+
+            <h3>Events</h3>
+
+            <p>
+                Floral design and creative
+                concepts for private and
+                corporate events.
+            </p>
+
+            <span class="arrow">↗</span>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <span class="service-number">03</span>
+
+            <h3>Creative Space</h3>
+
+            <p>
+                Workshops, gatherings,
+                dinners and creative
+                experiences.
+            </p>
+
+            <span class="arrow">↗</span>
+
+        </a>
+
+
+        <a href="#" class="service-item">
+
+            <span class="service-number">04</span>
+
+            <h3>Collaborations</h3>
+
+            <p>
+                Floral and spatial concepts
+                for brands, hotels, restaurants
+                and creative projects.
+            </p>
+
+            <span class="arrow">↗</span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURE
+========================= -->
+
+<section class="feature">
+
+    <div class="feature-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=2200&q=90"
+            alt="MARSANO floral design"
+        >
+
+        <div class="feature-caption">
+
+            <div class="eyebrow">
+                Signature MARSANO
+            </div>
+
+            <h2>
+                Make room
+                <br>
+                for beauty.
+            </h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SHOP
+========================= -->
+
+<section class="shop" id="shop">
+
+    <div class="section-header">
+
+        <h3>Selected objects</h3>
+
+        <a href="#" class="cta">
+            View all →
+        </a>
+
+    </div>
+
+
+    <div class="shop-grid">
+
+
+        <a href="#" class="product">
+
+            <img
+                src="https://images.unsplash.com/photo-1596433809257-9f3d2e4f8b0f?auto=format&fit=crop&w=900&q=85"
+                alt="Floral arrangement"
+            >
+
+            <div class="product-info">
+
+                <div>
+                    <div class="product-name">
+                        Signature Bouquet
+                    </div>
+
+                    <div>
+                        Seasonal flowers
+                    </div>
+                </div>
+
+                <span>€90</span>
+
+            </div>
+
+        </a>
+
+
+        <a href="#" class="product">
+
+            <img
+                src="https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=900&q=85"
+                alt="Vase"
+            >
+
+            <div class="product-info">
+
+                <div>
+                    <div class="product-name">
+                        MUSE Vase
+                    </div>
+
+                    <div>
+                        MARSANO Collection
+                    </div>
+                </div>
+
+                <span>€198</span>
+
+            </div>
+
+        </a>
+
+
+        <a href="#" class="product">
+
+            <img
+                src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=85"
+                alt="Plant"
+            >
+
+            <div class="product-info">
+
+                <div>
+                    <div class="product-name">
+                        Garden Collection
+                    </div>
+
+                    <div>
+                        Plants & seasonal objects
+                    </div>
+                </div>
+
+                <span>€35</span>
+
+            </div>
+
+        </a>
+
+
+        <a href="#" class="product">
+
+            <img
+                src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85"
+                alt="Green plant"
+            >
+
+            <div class="product-info">
+
+                <div>
+                    <div class="product-name">
+                        Green Object
+                    </div>
+
+                    <div>
+                        Selected interiors
+                    </div>
+                </div>
+
+                <span>€60</span>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COLLABORATIONS
+========================= -->
+
+<section class="collabs">
+
+    <div class="eyebrow">
+        MARSANO ×
+    </div>
+
+    <h2>
+        Made with
+        <br>
+        others.
+    </h2>
+
+
+    <div class="collab-grid">
+
+        <div class="collab">
+            PB 0110
+        </div>
+
+        <div class="collab">
+            VIERI
+        </div>
+
+        <div class="collab">
+            AMORE
+        </div>
+
+        <div class="collab">
+            THE KNOTS
+        </div>
+
+        <div class="collab">
+            MAIAMI
+        </div>
+
+        <div class="collab">
+            NADINE GOEPFERT
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="final" id="about">
+
+    <div class="eyebrow">
+        Berlin · Flowers · Interiors · Events
+    </div>
+
+    <h2>
+        Let's create
+        <br>
+        something
+        <br>
+        beautiful.
+    </h2>
+
+    <p>
+        Planning a wedding, event, collaboration
+        or simply looking for something special?
+        Tell us what you're imagining.
+    </p>
+
+    <a href="#" class="cta">
+        Work with MARSANO →
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div>
+
+            <div class="footer-logo">
+                MARSANO
+            </div>
+
+            <p style="margin-top:20px;">
+                Flowers, interiors and creative
+                experiences in Berlin.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Visit</h4>
+
+            <p>
+                Berlin<br>
+                Tuesday — Friday<br>
+                10 — 18<br>
+                Saturday<br>
+                10 — 16
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Contact</h4>
+
+            <p>
+                info@marsano-berlin.de<br>
+                +49 30 20614747
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 MARSANO
+        </span>
+
+        <span>
+            Concept redesign · Giulia Mazza
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function openMenu() {
+    document
+        .getElementById("mobileMenu")
+        .classList.add("active");
+}
+
+function closeMenu() {
+    document
+        .getElementById("mobileMenu")
+        .classList.remove("active");
+}
+
+
+/* =========================
+   SIMPLE SCROLL REVEAL
+========================= */
+
+const observer = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+    {
+        threshold: .12
+    }
+);
+
+
+document
+    .querySelectorAll(
+        ".intro, .world-card, .field-copy, .field-image, .service-item, .product, .collab, .final"
+    )
+    .forEach(el => {
+
+        el.style.opacity = "0";
+        el.style.transform = "translateY(35px)";
+        el.style.transition =
+            "opacity .8s ease, transform .8s ease";
+
+        observer.observe(el);
+
+    });
+
+</script>
+
+</body>
+</html>
